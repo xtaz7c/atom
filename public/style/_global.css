@@ -1,0 +1,33 @@
+body {
+    font-family: var(--font-family);
+    color: var(--txt-01);
+    overflow-x: hidden;
+    background: var(--bg-01);
+  transition: var(--anima-01);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--ani-01);
+}
+
+a:hover {
+  color: var(--brand-01);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}

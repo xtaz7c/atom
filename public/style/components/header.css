@@ -1,0 +1,18 @@
+.head{
+    height: 8vh;
+    width: 90vw;
+    padding: var(--gap-01) var(--gap-04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    z-index: 100;
+    backdrop-filter: var(--blur-04);
+    transform: translateX(-50%);
+    border: 1px solid var(--bg-w-00);
+    border-radius: var(--rad-04);
+    background: var(--bg-b-00);
+    box-shadow: var(--shadow-w-01);
+}

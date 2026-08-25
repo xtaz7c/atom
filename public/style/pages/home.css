@@ -1,25 +1,21 @@
-.head{
-    height: 8vh;
-    margin: var(--gap-04);
-    padding: var(--gap-01);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--bg-w-00);
-    border-radius: var(--rad-05);
-    background: var(--bg-b-00);
-}
-.right-box{
-}
-
 .head-logo{
     height: 32px;
     width: 32px;
     border-radius: 50%;
 }
 
+.center-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-04);
+}
 .nav-link{
     padding: 0.25rem 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-01);
     border-radius: var(--rad-01);
     border: 1px solid transparent;
     transition: var(--ani-01);
@@ -28,4 +24,60 @@
         border: 1px solid var(--brand-05);
         background-color: var(--brand-06);
     }
+}
+.left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-02);
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-1{
+    height: 100vh;
+    background: #010101;
+    background: radial-gradient(circle, rgba(1, 1, 1, 1) 0%, rgba(0, 51, 33, 1) 50%, rgba(1, 1, 1, 1) 100%);
+}
+
+.set-h{
+    height: 80vh;
+    margin: var(--space-10) var(--space-7);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap-04);
+    border-radius: var(--rad-06);
+    background: var(--bg-b-01);
+    border: 1px solid var(--bg-w-00);
+    box-shadow: var(--shadow-w-02);
+    backdrop-filter: var(--blur-02);
+}
+.set-h img{
+    height: 64px;
+    width: 64px;
+}
+.set-h h1{
+    font-size: 3rem;
+    color: var(--brand-01);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.set-h p{
+    font-size: 1.25rem;
+    color: var(--txt-02);
+}
+.highlight{
+    color: var(--brand-01);
+    font-weight: bold;
 }

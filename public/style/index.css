@@ -3,3 +3,10 @@
 @import url('./_global.css');
 
 @import url('./loader.css');
+
+/* ====== P A G E S ====== */
+@import url('./pages/home.css');
+
+/* ====== C O M P O N E N T S ====== */
+@import url('./components/header.css');
+@import url('./components/footer.css');

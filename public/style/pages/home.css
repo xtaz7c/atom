@@ -1,0 +1,31 @@
+.head{
+    height: 8vh;
+    margin: var(--gap-04);
+    padding: var(--gap-01);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--bg-w-00);
+    border-radius: var(--rad-05);
+    background: var(--bg-b-00);
+}
+.right-box{
+}
+
+.head-logo{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.nav-link{
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--rad-01);
+    border: 1px solid transparent;
+    transition: var(--ani-01);
+
+    &:hover{
+        border: 1px solid var(--brand-05);
+        background-color: var(--brand-06);
+    }
+}

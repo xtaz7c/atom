@@ -1,0 +1,79 @@
+/* ====== P R O F I L E ====== */
+.profileBase {
+   width: 80vw;
+   margin: 0 10vw;
+}
+.profileHeader {
+   margin: var(--gap-02);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.prodiv {
+   display: flex;
+   flex-direction: column;
+}
+.profileIcon {
+   width: 128px;
+   border-radius: 50%;
+}
+.profileName {
+   text-align: center;
+}
+.profileBio {
+   margin: var(--gap-02) 0;
+}
+
+/* ====== T A B L E ====== */
+.protable {
+   
+}
+.protr {
+   display: flex;
+   justify-content: start;
+   border-bottom: 1.8px solid var(--brand-01);
+}
+.proth {
+   width: 24rem;
+   font-weight: 600;
+}
+
+/* ====== a ====== */
+.prottr {
+   display: flex;
+   justify-content: start;
+   border-bottom: 1px solid var(--brand-02);
+}
+.proth,
+.protd {
+   margin-right: var(--gap-02);
+   width: 24rem;
+}
+.protd{
+   margin: var(--gap-02);
+}
+.btn-magnet {
+   width: max-content;
+   padding: 0 1rem;
+   display: flex;
+   align-items: center;
+   gap: var(--gap-01);
+   font-weight: 600;
+   color: var(--brand-01);
+   overflow: hidden;
+   display: flex;
+   border-radius: var(--rad-01);
+   background-color: var(--brand-05);
+   border: 1px solid var(--brand-05);
+}
+
+.magnet{
+   width: 10rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+.magnet-icon{transform: rotate(-30deg);
+}

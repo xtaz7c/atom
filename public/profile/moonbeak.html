@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Perfil | Moon Beak</title>
+      <link rel="icon" href="/asset/briefing/MoonBeak.png" />
+
+      <!-- Markdown render -->
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+      <!-- Import CSS -->
+      <link rel="stylesheet" href="/style/index.css" />
+
+      <!-- Script Loader -->
+      <script type="module" src="/js/loader.js"></script>
+
+      <!-- Import Icons -->
+      <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+   </head>
+
+   <body>
+      <header></header>
+
+      <main class="profileBase">
+         <header class="profileHeader">
+            <div class="prodiv">
+               <img
+                  class="profileIcon"
+                  src="/asset/briefing/MoonBeak.png"
+                  alt="Avatar" />
+               <span class="profileName">Moon Beak</span>
+            </div>
+
+            <p class="profileBio">Focado.</p>
+         </header>
+
+         <div class="protable">
+            <div class="protr">
+               <span class="proth">Nome</span>
+               <span class="proth">Qualidade</span>
+               <span class="proth">Semeadores</span>
+               <span class="proth magnet">Magnet</span>
+            </div>
+
+            <div
+               class="prottr"
+               data-magnet="magnet:?xt=urn:btih:SEU_HASH_AQUI&dn=Convite">
+               <!--
+
+               <span class="protd nome">...</span>
+               <span class="protd tamanho">...</span>
+               <span class="protd qualidade">...</span>
+               <span class="protd semeadores">...</span>
+
+               <span class="protd magnet">
+                  <button class="btn-magnet">
+                     <img src="/asset/icons/link.svg" alt="" />
+                     Magnet
+                  </button>
+               </span>
+         -->
+            </div>
+         </div>
+      </main>
+
+      <script src="/js/content.js"></script>
+   </body>
+</html>

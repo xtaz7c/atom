@@ -38,11 +38,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+/* ====== BG ====== */
 .bg-1{
     height: 100vh;
     background: #010101;
     background: radial-gradient(circle, rgba(1, 1, 1, 1) 0%, rgba(0, 51, 33, 1) 50%, rgba(1, 1, 1, 1) 100%);
+}
+.bg-2{
+    height: 2vh;
+    width: 100%;
+background-color: #010101;
+opacity: 0.6;
+background-image:  radial-gradient(25% 25% at 25% 25%, #00ffae 99%, transparent 101%), radial-gradient(25% 25% at 25% 25%, #00ffae 99%, transparent 101%), radial-gradient(50% 50%, #010101 98%, transparent), repeating-conic-gradient(#010101 0 25%, #00ffae 0 50%);
+background-position: 75px 75px, 0 0, 0 0, 37.5px 0;
+background-size: 150px 150px, 150px 150px, 75px 75px, 150px 75px;
 }
 
 .set-h{

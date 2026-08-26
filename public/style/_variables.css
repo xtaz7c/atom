@@ -66,14 +66,21 @@
   --brand-05: #00ffae40;
   --brand-06: #00ffae1a;
 
-  --High-01: #ee0000;
-  --High-02: #ee0000d9;
-  --High-03: #ee0000bf;
-  --High-04: #ee000080;
-  --High-05: #ee000040;
-  --High-06: #ee00001a;
+  --high-01: #ee0000;
+  --high-02: #ee0000d9;
+  --high-03: #ee0000bf;
+  --high-04: #ee000080;
+  --high-05: #ee000040;
+  --high-06: #ee00001a;
 
   /* ===== UTILITY COLORS ===== */
+  --hl-cor-01: #00ff6a;
+  --hl-cor-02: #ff9900;
+  --hl-cor-03: #00f2ffbf;
+  --hl-cor-04: #6200ff;
+  --hl-cor-05: #ffff00;
+  --hl-cor-06: #ff00ff;
+
   --attention-01: #fedc00ff;
 
   --danger-01: #ff0800;

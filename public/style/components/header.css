@@ -20,11 +20,13 @@
 /* ====== LINKS ======*/
 .nav-link{
     padding: 0.25rem 0.75rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--txt-02);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--gap-01);
+    gap: var(--gap-02);
     border-radius: var(--rad-01);
     border: 1px solid transparent;
     transition: var(--ani-01);
@@ -40,8 +42,20 @@
         color: var(--txt-02);
     }
     .icon-cor-nav{
-        color: var(--brand-01);
+        color: var(--hl-cor-01);
     }
-    .icon-cor{
-        color: var(--brand-02);
+    .icon-cor-fire{
+        color: var(--hl-cor-02);
+    }
+    .icon-cor-ren{
+        color: var(--hl-cor-03);
+    }
+    .icon-cor-coll{
+        color: var(--hl-cor-04);
+    }
+    .icon-cor-tops{
+        color: var(--hl-cor-05);
+    }
+    .icon-cor-gen{
+        color: var(--hl-cor-06);
     }

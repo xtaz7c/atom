@@ -1,0 +1,73 @@
+.boxlayout-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-04);
+    flex-direction: column;
+}
+.section-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--txt-01);
+}
+/* CAPAS DE CONTEÚDOS*/
+.layout-content-card{
+    height: 100%;
+    width: 100%;
+}
+.content-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-04);
+    transition: var(--ani-02);
+} 
+.content-card img{
+    height: 334px;
+    width: 222px;
+    object-fit: cover;
+    border-radius: var(--rad-02);
+    border: 1px solid var(--bg-w-00);
+    transition: var(--ani-02);
+}
+.content-card h3{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--txt-01);
+}
+.card-info-layout-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.card-info-layout-1 #year{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--txt-02);
+}
+.card-info-layout-1 .space-icon{
+    width: .12rem;
+    height: .12rem;
+    margin: 0 var(--gap-01);
+    background-color: var(--txt-02);
+    border-radius: 50%;
+}
+.card-info-layout-1 #type{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--txt-02);
+}
+
+.content-card:hover,
+.content-card h3:hover,
+.content-card img:hover{
+    color: var(--brand-01);
+    border: 1px solid var(--brand-05);
+    transform: scale(1.025);
+}

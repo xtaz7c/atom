@@ -13,6 +13,35 @@
     transform: translateX(-50%);
     border: 1px solid var(--bg-w-00);
     border-radius: var(--rad-04);
-    background: var(--bg-b-00);
+    background: var(--bg-b-02);
     box-shadow: var(--shadow-w-01);
 }
+
+/* ====== LINKS ======*/
+.nav-link{
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-01);
+    border-radius: var(--rad-01);
+    border: 1px solid transparent;
+    transition: var(--ani-01);
+
+    &:hover{
+        border: 1px solid var(--brand-05);
+        background-color: var(--brand-06);
+    }
+}
+/* ====== ICONS HEADER ======*/
+    .icon{
+        font-size: 1rem;
+        color: var(--txt-02);
+    }
+    .icon-cor-nav{
+        color: var(--brand-01);
+    }
+    .icon-cor{
+        color: var(--brand-02);
+    }

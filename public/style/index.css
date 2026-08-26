@@ -5,7 +5,9 @@
 @import url('./loader.css');
 
 /* ====== P A G E S ====== */
+@import url('./start.css');
 @import url('./pages/home.css');
+@import url('./pages/profiles.css');
 
 /* ====== C O M P O N E N T S ====== */
 @import url('./components/header.css');

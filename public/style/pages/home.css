@@ -55,6 +55,16 @@ background-image:  radial-gradient(25% 25% at 25% 25%, #00ffae 99%, transparent 
 background-position: 75px 75px, 0 0, 0 0, 37.5px 0;
 background-size: 150px 150px, 150px 150px, 75px 75px, 150px 75px;
 }
+.bg-4a {
+    height: auto;
+   background-image: radial-gradient(
+      circle at center bottom,
+      rgb(0, 143, 29) 10%,
+      rgb(18, 82, 0) 30%,
+      rgb(0, 0, 0) 85%
+   );
+   filter: blur(18px);
+}
 
 .set-h{
     height: 80vh;

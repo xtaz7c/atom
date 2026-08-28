@@ -1,73 +1,149 @@
-.boxlayout-1{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--gap-04);
-    flex-direction: column;
-}
-.section-title{
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--txt-01);
-}
-/* CAPAS DE CONTEÚDOS*/
-.layout-content-card{
-    height: 100%;
-    width: 100%;
-}
-.content-card{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: var(--gap-04);
-    transition: var(--ani-02);
-} 
-.content-card img{
-    height: 334px;
-    width: 222px;
-    object-fit: cover;
-    border-radius: var(--rad-02);
-    border: 1px solid var(--bg-w-00);
-    transition: var(--ani-02);
-}
-.content-card h3{
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--txt-01);
-}
-.card-info-layout-1{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-.card-info-layout-1 #year{
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--txt-02);
-}
-.card-info-layout-1 .space-icon{
-    width: .12rem;
-    height: .12rem;
-    margin: 0 var(--gap-01);
-    background-color: var(--txt-02);
-    border-radius: 50%;
-}
-.card-info-layout-1 #type{
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--txt-02);
+.set-h2 {
+   width: 100%;
+   display: flex;
 }
 
-.content-card:hover,
-.content-card h3:hover,
-.content-card img:hover{
-    color: var(--brand-01);
-    border: 1px solid var(--brand-05);
-    transform: scale(1.025);
+.boxlayout-1 {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--gap-01);
+   flex-direction: column;
+}
+.section-title {
+   padding: var(--gap-02) 0;
+   font-size: 1.3rem;
+   font-weight: bold;
+   color: var(--txt-01);
+}
+
+/* CAPAS DE CONTEÚDOS*/
+.layout-content-card {
+   height: min-content;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--gap-02);
+}
+.content-card {
+   height: min-content;
+   width: 222px;
+   margin: var(--gap-02) 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: var(--gap-02);
+   position: relative;
+   transition: var(--ani-02);
+}
+.content-card img {
+   height: 334px;
+   width: 222px;
+   object-fit: cover;
+   border-radius: var(--rad-02);
+   border: 1px solid var(--bg-w-00);
+   transition: var(--ani-02);
+}
+.content-card h3 {
+   font-size: 1rem;
+   font-weight: 600;
+   color: var(--txt-01);
+   transition: var(--ani-02);
+}
+.card-info-layout-1 {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
+.card-info-layout-1 #year {
+   font-size: 0.8rem;
+   font-weight: 400;
+   color: var(--txt-02);
+}
+.card-info-layout-1 .space-icon {
+   width: 0.12rem;
+   height: 0.12rem;
+   margin: 0 var(--gap-01);
+   background-color: var(--txt-02);
+   border-radius: 50%;
+}
+.card-info-layout-1 #type {
+   font-size: 0.8rem;
+   font-weight: 400;
+   color: var(--txt-02);
+}
+.content-card:hover h3 {
+   color: var(--brand-01);
+}
+.content-card:hover img {
+   color: var(--brand-01);
+   transform: translateY(-0.35rem);
+}
+
+/* ====== SECTION ======*/
+.set-h3 {
+   width: 100%;
+   min-height: 30vh;
+   margin: var(--space-3) var(--space-7);
+   padding: var(--space-6);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   gap: var(--gap-04);
+}
+.set-h3 h2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--gap-03);
+}
+.layout-boxingUs {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--gap-04);
+   flex-direction: row;
+}
+.iconBox {
+   font-size: 1.5rem;
+   color: var(--brand-01);
+}
+.boxingUs {
+   height: 8rem;
+   width: 8rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--gap-01);
+   flex-direction: column;
+   background-color: var(--brand-06);
+   border: 1px solid var(--brand-05);
+   border-radius: var(--rad-06);
+}
+
+.boxingUs h3 {
+   font-size: 1rem;
+   font-weight: 400;
+   color: var(--txt-01);
+}
+
+.boxingIcons {
+   width: min-content;
+   padding: var(--gap-03);
+   font-size: 1.5rem;
+   color: var(--brand-01);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--brand-06);
+   border-radius: var(--rad-06);
+   border: 1px solid var(--brand-05);
 }

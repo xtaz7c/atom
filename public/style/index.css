@@ -12,4 +12,5 @@
 /* ====== C O M P O N E N T S ====== */
 @import url('./components/header.css');
 @import url('./components/footer.css');
-@import url('./components/content.css')
+@import url('./components/content.css');
+@import url('./components/dropdown.css');

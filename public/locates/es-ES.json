@@ -1,0 +1,32 @@
+{
+    "meta": {
+        "name": "Español",
+        "short": "ES",
+        "locale": "es-ES"
+    },
+
+    "header": {
+        "home": "Atom — inicio",
+        "logo": "Atom",
+        "navigation": "Navegación principal",
+        "calendar": "Calendario"
+    },
+
+    "navigation": {
+        "discover": "Descubrir",
+        "popular": "Popular",
+        "recent": "Recientes",
+        "collections": "Colecciones",
+        "top": "Mejores",
+        "genres": "Géneros"
+    },
+
+    "language": {
+        "selector": "Seleccionar idioma"
+    },
+
+    "auth": {
+        "login": "Iniciar sesión",
+        "logout": "Cerrar sesión"
+    }
+}

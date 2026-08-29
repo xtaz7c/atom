@@ -1,61 +1,493 @@
-.head{
-    height: 8vh;
-    width: 90vw;
-    padding: var(--gap-01) var(--gap-04);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.head {
     position: fixed;
+
     top: 1rem;
     left: 50%;
     z-index: 100;
-    backdrop-filter: var(--blur-04);
-    transform: translateX(-50%);
-    border: 1px solid var(--bg-w-00);
-    border-radius: var(--rad-04);
-    background: var(--bg-b-02);
-    box-shadow: var(--shadow-w-01);
-}
 
-/* ====== LINKS ======*/
-.nav-link{
-    padding: 0.25rem 0.75rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--txt-02);
+    width: min(90vw, 1400px);
+    min-height: 4.5rem;
+
+    padding: var(--gap-02) var(--gap-03);
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: var(--gap-02);
-    border-radius: var(--rad-01);
-    border: 1px solid transparent;
-    transition: var(--ani-01);
+    justify-content: space-between;
 
-    &:hover{
-        border: 1px solid var(--brand-05);
-        background-color: var(--brand-06);
-    }
+    gap: var(--gap-04);
+
+    transform: translateX(-50%);
+
+    /*
+     * Glass
+     */
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        ),
+        var(--bg-b-02);
+
+    border: var(--border-02);
+    border-radius: var(--rad-04);
+
+    /*
+     * Glass depth
+     */
+    box-shadow:
+        var(--shadow-b-02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: var(--blur-04);
+    -webkit-backdrop-filter: var(--blur-04);
+
+    isolation: isolate;
 }
-/* ====== ICONS HEADER ======*/
-    .icon{
-        font-size: 1rem;
-        color: var(--txt-02);
+
+
+/*
+ * Reflexo superior do vidro
+ */
+
+.head::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.055),
+            transparent 35%
+        );
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.right-box {
+    position: relative;
+    z-index: 1;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding: var(--gap-02);
+
+    border-radius: var(--rad-02);
+
+    transition: var(--ani-02);
+}
+
+.right-box:hover {
+    background: var(--brand-06);
+}
+
+.right-box:focus-visible {
+    outline: 2px solid var(--brand-01);
+    outline-offset: 3px;
+}
+
+.head-logo {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO CENTRAL
+   ========================================================= */
+
+.center-box {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--gap-01);
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.nav-link {
+    position: relative;
+
+    min-height: 2.5rem;
+
+    padding: var(--gap-02) var(--gap-03);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--gap-02);
+
+    color: var(--txt-02);
+
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+    text-decoration: none;
+
+    border: 1px solid transparent;
+    border-radius: var(--rad-02);
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/*
+ * Hover
+ */
+
+.nav-link:hover {
+    color: var(--txt-01);
+
+    border-color: var(--brand-05);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-06),
+            rgba(0, 255, 174, 0.025)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transform: translateY(-1px);
+}
+
+
+/*
+ * Estado ativo
+ */
+
+.nav-link.active {
+    color: var(--txt-01);
+
+    border-color: var(--brand-05);
+
+    background: var(--brand-06);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+/*
+ * Indicador do item ativo
+ */
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    right: 50%;
+    bottom: -0.35rem;
+
+    width: 0.25rem;
+    height: 0.25rem;
+
+    border-radius: 50%;
+
+    background: var(--brand-01);
+
+    box-shadow:
+        0 0 8px var(--brand-04);
+
+    transform: translateX(50%);
+}
+
+
+/*
+ * Focus
+ */
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--brand-01);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   ÍCONES
+   ========================================================= */
+
+.icon {
+    flex-shrink: 0;
+
+    font-size: 1rem;
+
+    color: var(--txt-02);
+
+    transition: var(--ani-02);
+}
+
+.nav-link:hover .icon,
+.nav-link.active .icon {
+    filter: brightness(1.1);
+}
+
+
+/* =========================================================
+   CORES DOS ÍCONES
+   ========================================================= */
+
+.icon-cor-nav {
+    color: var(--hl-cor-01);
+}
+
+.icon-cor-fire {
+    color: var(--hl-cor-02);
+}
+
+.icon-cor-ren {
+    color: var(--hl-cor-03);
+}
+
+.icon-cor-coll {
+    color: var(--hl-cor-04);
+}
+
+.icon-cor-tops {
+    color: var(--hl-cor-05);
+}
+
+.icon-cor-gen {
+    color: var(--hl-cor-06);
+}
+
+
+/* =========================================================
+   ÁREA DIREITA
+   ========================================================= */
+
+.left-box {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--gap-01);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ÍCONE ISOLADO
+   ========================================================= */
+
+.nav-link.icon-only {
+    width: 2.5rem;
+
+    padding: var(--gap-02);
+}
+
+
+/* =========================================================
+   BOTÃO LOGIN
+   ========================================================= */
+
+.login {
+    min-height: 2.5rem;
+
+    padding: var(--gap-02) var(--gap-04);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--gap-02);
+
+    color: var(--bg-01);
+
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    border: 1px solid var(--brand-03);
+    border-radius: var(--rad-02);
+
+    background: var(--brand-01);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 0 transparent;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.login:hover {
+    background: var(--brand-02);
+
+    border-color: var(--brand-02);
+
+    box-shadow:
+        0 0 16px var(--brand-05);
+
+    transform: translateY(-1px);
+}
+
+.login:active {
+    transform: translateY(0);
+}
+
+.login:focus-visible {
+    outline: 2px solid var(--brand-01);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .head {
+        width: 94vw;
     }
-    .icon-cor-nav{
-        color: var(--hl-cor-01);
+
+    .nav-link {
+        padding-inline: var(--gap-02);
+
+        font-size: 0.75rem;
     }
-    .icon-cor-fire{
-        color: var(--hl-cor-02);
+
+    .center-box {
+        gap: 0;
     }
-    .icon-cor-ren{
-        color: var(--hl-cor-03);
+
+}
+
+
+@media (max-width: 900px) {
+
+    .head {
+        width: 95vw;
     }
-    .icon-cor-coll{
-        color: var(--hl-cor-04);
+
+    .nav-link span {
+        display: none;
     }
-    .icon-cor-tops{
-        color: var(--hl-cor-05);
+
+    .nav-link {
+        width: 2.5rem;
+
+        padding: var(--gap-02);
     }
-    .icon-cor-gen{
-        color: var(--hl-cor-06);
+
+    .nav-link.icon-only {
+        width: 2.5rem;
     }
+
+    .login {
+        width: 2.5rem;
+
+        padding-inline: var(--gap-02);
+    }
+
+    .login span {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .head {
+        top: 0.5rem;
+
+        width: calc(100vw - 1rem);
+
+        min-height: 4rem;
+
+        padding: var(--gap-02);
+    }
+
+    .head-logo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .center-box {
+        flex: 1;
+
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .center-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .left-box {
+        gap: 0;
+    }
+
+    /*
+     * Evita que o header fique excessivamente
+     * largo em dispositivos pequenos.
+     */
+
+    .center-box .nav-link:nth-child(n + 5) {
+        display: none;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .head *,
+    .head *::before,
+    .head *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+}

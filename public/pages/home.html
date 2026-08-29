@@ -1,230 +1,543 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Atom</title>
-    <link rel="icon" href="/asset/icons/atom.svg" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home | Atom</title>
+      <link rel="icon" href="/asset/icons/atom.svg" />
 
-    <!-- Markdown render -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <!-- Markdown render -->
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!-- Import CSS -->
-    <link rel="stylesheet" href="/style/index.css" />
+      <!-- Import CSS -->
+      <link rel="stylesheet" href="/style/index.css" />
 
-    <!-- Script Loader -->
-    <script type="module" src="/js/loader.js"></script>
+      <!-- Script Loader -->
+      <script type="module" src="/js/loader.js"></script>
 
-    <!-- Import Icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-</head>
-<body>
-    <div id="preloader">
-      <div class="custom-loader"></div>
+      <!-- Import Icons -->
+      <script
+         type="module"
+         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script
+         nomodule
+         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   </head>
+   <body>
+      <div id="preloader">
+         <div class="custom-loader"></div>
+      </div>
+
+      <div id="content">
+         <header class="head">
+
+    <a
+        href="/"
+        class="right-box"
+        aria-label="Atom — início"
+        data-i18n-aria="header.home"
+    >
+        <img
+            class="head-logo"
+            src="/asset/briefing/MoonBeak.png"
+            alt="Atom"
+            data-i18n-alt="header.logo"
+        >
+    </a>
+
+
+    <!-- Navegação principal -->
+    <nav
+        class="center-box"
+        aria-label="Navegação principal"
+        data-i18n-aria="header.navigation"
+    >
+
+        <a href="" class="nav-link active">
+            <ion-icon
+                class="icon icon-cor-nav"
+                name="navigate-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.discover">
+                Descobrir
+            </span>
+        </a>
+
+        <a href="" class="nav-link">
+            <ion-icon
+                class="icon icon-cor-fire"
+                name="flame-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.popular">
+                Popular
+            </span>
+        </a>
+
+        <a href="" class="nav-link">
+            <ion-icon
+                class="icon icon-cor-ren"
+                name="time-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.recent">
+                Recentes
+            </span>
+        </a>
+
+        <a href="" class="nav-link">
+            <ion-icon
+                class="icon icon-cor-coll"
+                name="grid-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.collections">
+                Coleções
+            </span>
+        </a>
+
+        <a href="" class="nav-link">
+            <ion-icon
+                class="icon icon-cor-tops"
+                name="star-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.top">
+                Tops
+            </span>
+        </a>
+
+        <a href="" class="nav-link">
+            <ion-icon
+                class="icon icon-cor-gen"
+                name="filter-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="navigation.genres">
+                Gêneros
+            </span>
+        </a>
+
+    </nav>
+
+
+    <!-- Ações -->
+    <div class="left-box">
+
+        <a
+            href=""
+            class="nav-link icon-only"
+            aria-label="Calendário"
+            data-i18n-aria="header.calendar"
+        >
+            <ion-icon
+                name="calendar-outline"
+                aria-hidden="true"
+            ></ion-icon>
+        </a>
+
+
+        <!-- LANGUAGE DROPDOWN -->
+        <div class="language">
+
+            <button
+                type="button"
+                class="language-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="language-menu"
+                data-i18n-aria="language.selector"
+            >
+                <ion-icon
+                    name="globe-outline"
+                    aria-hidden="true"
+                ></ion-icon>
+
+                <span class="language-current">
+                    PT
+                </span>
+
+                <ion-icon
+                    class="language-chevron"
+                    name="chevron-down-outline"
+                    aria-hidden="true"
+                ></ion-icon>
+            </button>
+
+
+            <div
+                id="language-menu"
+                class="language-menu"
+                role="menu"
+                hidden
+            >
+
+                <button
+                    type="button"
+                    class="language-option active"
+                    role="menuitem"
+                    data-language="pt-BR"
+                >
+                    <span>Português</span>
+                    <small>PT</small>
+                </button>
+
+                <button
+                    type="button"
+                    class="language-option"
+                    role="menuitem"
+                    data-language="en-US"
+                >
+                    <span>English</span>
+                    <small>EN</small>
+                </button>
+
+                <button
+                    type="button"
+                    class="language-option"
+                    role="menuitem"
+                    data-language="es-ES"
+                >
+                    <span>Español</span>
+                    <small>ES</small>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOGIN -->
+        <button
+            type="button"
+            class="login"
+        >
+            <ion-icon
+                name="log-in-outline"
+                aria-hidden="true"
+            ></ion-icon>
+
+            <span data-i18n="auth.login">
+                Entrar
+            </span>
+        </button>
+
     </div>
 
-    <div id="content">
+</header>
 
-        <header class="head">
-            <a href="#" class="right-box">
-                <img class="head-logo" src="/asset/briefing/MoonBeak.png" alt="Logo">
-            </a>
-
-            <nav class="center-box">
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-nav" name="navigate-outline"></ion-icon>Descobrir</a>
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-fire" name="flame-outline"></ion-icon>Popular</a>
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-ren" name="time-outline"></ion-icon>Recentes</a>
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-coll" name="grid-outline"></ion-icon>Coleções</a>
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-tops" name="star-outline"></ion-icon>Tops</a>
-                <a class="nav-link" href=""><ion-icon class="icon icon-cor-gen" name="filter-outline"></ion-icon>Gêneros</a>
-            </nav>
-
-            <div class="left-box">
-                <a class="nav-link" href=""><ion-icon name="calendar-outline"></ion-icon>Calendário</a>
-                <a class="nav-link" href=""><ion-icon name="globe-outline"></ion-icon></a>
-                <Button class="login"><ion-icon name="log-in-outline"></ion-icon>Entrar</Button>
-            </div>
-        </header>
-
-        <main class="main">
+         <main class="main">
             <div class="bg-1">
-                <section class="set-h">
-                <h1><img src="/asset/icons/atom.svg" alt="Logo"> Atom</h1>
-                <p>Bem-vindo ao Atom!</p>
-                <p>O Atom é uma plataforma de links magnet, onde você pode baixar <strong class="highlight">Animes, Séries, Filmes, Músicas, Jogos, HQs, Mangás, Manhwas</strong> favoritos de forma rápida e fácil. Com uma interface intuitiva e recursos avançados, o Atom oferece uma experiência de visualização imersiva para os fãs de torrent.</p>
-            </section>
+               <section class="set-h">
+                  <h1><img src="/asset/icons/atom.svg" alt="Logo" /> Atom</h1>
+                  <p>Bem-vindo ao Atom!</p>
+                  <p>
+                     O Atom é uma plataforma de links magnet, onde você pode
+                     baixar
+                     <strong class="highlight"
+                        >Animes, Séries, Filmes, Músicas, Jogos, HQs, Mangás,
+                        Manhwas</strong
+                     >
+                     favoritos de forma rápida e fácil. Com uma interface
+                     intuitiva e recursos avançados, o Atom oferece uma
+                     experiência de visualização imersiva para os fãs de
+                     torrent.
+                  </p>
+               </section>
             </div>
 
             <div class="bg-2"></div>
 
             <section class="set-h2 collumn">
+               <div class="boxlayout-1 popular">
+                  <h2 class="section-title">Filmes Populares</h2>
 
-                <div class="boxlayout-1 popular">
-                    <h2 class="section-title">Filmes Populares</h2>
+                  <article class="layout-content-card">
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Filme 1" />
+                        <h3>Filme 1</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">Movie</span>
+                        </div>
+                     </a>
 
-                    <article class="layout-content-card">
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Filme 1">
-                            <h3>Filme 1</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">Movie</span>
-                            </div>
-                        </a>
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Filme 1" />
+                        <h3>Filme 2</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">Movie</span>
+                        </div>
+                     </a>
 
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Filme 1">
-                            <h3>Filme 2</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">Movie</span>
-                            </div>
-                        </a>
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Filme 1" />
+                        <h3>Filme 3</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">Movie</span>
+                        </div>
+                     </a>
+                  </article>
+               </div>
 
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Filme 1">
-                            <h3>Filme 3</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">Movie</span>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+               <div class="boxlayout-1 popular">
+                  <h2 class="section-title">Séries Populares</h2>
 
-                <div class="boxlayout-1 popular">
-                    <h2 class="section-title">Séries Populares</h2>
+                  <article class="layout-content-card">
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Série 1" />
+                        <h3>Série 1</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">TV Show</span>
+                        </div>
+                     </a>
 
-                    <article class="layout-content-card">
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Série 1">
-                            <h3>Série 1</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">TV Show</span>
-                            </div>
-                        </a>
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Série 1" />
+                        <h3>Série 2</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">TV Show</span>
+                        </div>
+                     </a>
 
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Série 1">
-                            <h3>Série 2</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">TV Show</span>
-                            </div>
-                        </a>
-
-                        <a class="content-card">
-                            <img src="/asset/briefing/nocover.jpg" alt="Série 1">
-                            <h3>Série 3</h3>
-                            <div class="card-info-layout-1">
-                                <span id="year">20XX</span><div class="space-icon"></div><span id="type">TV Show</span>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-
+                     <a class="content-card">
+                        <img src="/asset/briefing/nocover.jpg" alt="Série 1" />
+                        <h3>Série 3</h3>
+                        <div class="card-info-layout-1">
+                           <span id="year">20XX</span>
+                           <div class="space-icon"></div>
+                           <span id="type">TV Show</span>
+                        </div>
+                     </a>
+                  </article>
+               </div>
             </section>
 
             <section class="set-h3">
-                <div class="bg-4">
-                    <h2>O que nos faz diferente?</h2>
+               <div class="bg-4">
+                  <h2>O que nos faz diferente?</h2>
 
-                <article class="layout-boxingUs">
-                    <div class="boxingUs">
-                    <h3><div class="iconBox"><ion-icon name="speedometer-outline"></ion-icon></div>Qualidade</h3>
-                    </div>
+                  <article class="layout-boxingUs">
+                     <div class="boxingUs">
+                        <h3>
+                           <div class="iconBox">
+                              <ion-icon name="speedometer-outline"></ion-icon>
+                           </div>
+                           Qualidade
+                        </h3>
+                     </div>
 
-                    <div class="boxingUs">
-                    <h3><div class="iconBox"><ion-icon name="download-outline"></ion-icon></div>Torrent</h3>
-                    </div>
+                     <div class="boxingUs">
+                        <h3>
+                           <div class="iconBox">
+                              <ion-icon name="download-outline"></ion-icon>
+                           </div>
+                           Torrent
+                        </h3>
+                     </div>
 
-                    <div class="boxingUs">
-                    <h3><div class="iconBox"><ion-icon name="hardware-chip-outline"></ion-icon></div>Agente AI</h3>
-                    </div>
+                     <div class="boxingUs">
+                        <h3>
+                           <div class="iconBox">
+                              <ion-icon name="hardware-chip-outline"></ion-icon>
+                           </div>
+                           Agente AI
+                        </h3>
+                     </div>
 
-                    <div class="boxingUs">
-                    <h3><div class="iconBox"><ion-icon name="link-outline"></ion-icon></div>Combinar</h3>
-                    </div>
+                     <div class="boxingUs">
+                        <h3>
+                           <div class="iconBox">
+                              <ion-icon name="link-outline"></ion-icon>
+                           </div>
+                           Combinar
+                        </h3>
+                     </div>
 
-                    <div class="boxingUs">
-                    <h3><div class="iconBox"><ion-icon name="globe-outline"></ion-icon></div>Multi-Lang</h3>
-                    </div>
-                </article>
-                </div>
-            
+                     <div class="boxingUs">
+                        <h3>
+                           <div class="iconBox">
+                              <ion-icon name="globe-outline"></ion-icon>
+                           </div>
+                           Multi-Lang
+                        </h3>
+                     </div>
+                  </article>
+               </div>
             </section>
 
             <div class="bg-2"></div>
 
             <section class="set-h3">
-                <h2><div class="boxingIcons"><ion-icon name="mail-unread-outline"></ion-icon></div>Convite de Moon Beak</h2>
-                <p>Compre um HD de 5TB e monte sua própria BIblioteca.<br>Mas com uma condição: Nos ajude Semeando e expandindo a comunidade.</p>
+               <h2>
+                  <div class="boxingIcons">
+                     <ion-icon name="mail-unread-outline"></ion-icon>
+                  </div>
+                  Convite de Moon Beak
+               </h2>
+               <p>
+                  Compre um HD de 5TB e monte sua própria BIblioteca.<br />Mas
+                  com uma condição: Nos ajude Semeando e expandindo a
+                  comunidade.
+               </p>
             </section>
 
             <section class="set-h3">
-                <h2><div class="boxingIcons"><ion-icon name="heart-outline"></ion-icon></div>Contribua</h2>
-                <p>Se você é um desenvolvedor, designer ou entusiasta de tecnologia, <br>junte-se a nós e contribua para o crescimento do Atom. Sua participação é fundamental para tornar a plataforma ainda melhor.</p>
+               <h2>
+                  <div class="boxingIcons">
+                     <ion-icon name="heart-outline"></ion-icon>
+                  </div>
+                  Contribua
+               </h2>
+               <p>
+                  Se você é um desenvolvedor, designer ou entusiasta de
+                  tecnologia, <br />junte-se a nós e contribua para o
+                  crescimento do Atom. Sua participação é fundamental para
+                  tornar a plataforma ainda melhor.
+               </p>
             </section>
 
             <div class="bg-2"></div>
 
-            <section class="set-h2">
-                <h2>Perguntas frequentes</h2>
-                <p></p>
-                <h3 class="faq-question">Como faço para baixar um arquivo?</h3>
-                <p class="faq-answer">Para baixar um arquivo, basta clicar no link magnético correspondente e usar um cliente torrent.</p>
+            <section class="set-h4">
+               <h2>Perguntas frequentes FQA</h2>
 
-                <h3 class="faq-question">O Atom é gratuito?</h3>
-                <p class="faq-answer">Sim, o Atom é totalmente gratuito para uso.</p>
+               <div class="faq-item">
+                  <button class="faq-question">O que é o Atom?</button>
+                  <div class="faq-answer">
+                     <p>
+                        Atom é uma plataforma de compartilhamento de arquivos
+                        P2P. Usando o protocolo BitTorrent, o Atom permite que
+                        os usuários compartilhem arquivos de forma
+                        descentralizada e segura.
+                     </p>
+                  </div>
+               </div>
 
-                <h3 class="faq-question">Posso contribuir com o Atom?</h3>
-                <p class="faq-answer">Sim, você pode contribuir com o Atom. Entre em contato conosco para saber como.</p>
+               <div class="faq-item">
+                  <button class="faq-question">
+                     Como faço para baixar um arquivo?
+                  </button>
+                  <div class="faq-answer">
+                     <p>
+                        Para baixar um arquivo, basta copiar o link magnético
+                        correspondente e usar um cliente torrent.
+                     </p>
+                  </div>
+               </div>
 
-                <h3 class="faq-question">O Atom é seguro?</h3>
-                <p class="faq-answer">Sim, o Atom é seguro. No entanto, recomendamos sempre verificar a autenticidade dos arquivos antes de baixá-los.</p>
+               <div class="faq-item">
+                  <button class="faq-question">O Atom é gratuito?</button>
+                  <div class="faq-answer">
+                     <p>
+                        Sim, o Atom é totalmente gratuito para uso, você só
+                        precisa ter um cliente torrent instalado.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="faq-item">
+                  <button class="faq-question">
+                     Posso contribuir com o Atom?
+                  </button>
+                  <div class="faq-answer">
+                     <p>
+                        Sim, você pode contribuir com o Atom. Semeando arquivos,
+                        reportando bugs ou sugerindo melhorias. Sua participação
+                        é muito importante para o crescimento da comunidade.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="faq-item">
+                  <button class="faq-question">O Atom é seguro?</button>
+                  <div class="faq-answer">
+                     <p>
+                        Sim, o Atom é seguro. No entanto, recomendamos sempre
+                        verificar a autenticidade dos arquivos antes de
+                        baixá-los.
+                     </p>
+                  </div>
+               </div>
             </section>
-        </main>
+         </main>
 
-        <footer class="footer">
-            <section class="f-sect">
-                <div class="">
-                    <h6>Atom</h6>
-                    <p>De Biblioteca a Biblioteca (P2P)</p>
-                </div>
+         <footer class="footer">
+            <div class="footer-main">
+               <section class="f-sect footer-brand">
+                  <div class="footer-block">
+                     <h6>Atom</h6>
+                     <p>De Biblioteca a Biblioteca <span>(P2P)</span></p>
+                  </div>
 
-                <div class="">Status do sistema</div>
-            </section>
+                  <div
+                     class="footer-status"
+                     aria-label="Status do sistema: operacional">
+                     <span class="status-indicator" aria-hidden="true"></span>
 
-            <section class="f-sect">
-                <div class="">
-                    <h6>Links</h6>
-                    <a href="">Sobre</a>
-                    <a href="">Contato</a>
-                    <a href="">Suporte</a>
-                </div>
+                     <div>
+                        <span class="status-label">Status do sistema</span>
+                        <strong>Operacional</strong>
+                     </div>
+                  </div>
+               </section>
 
-                <div class="">
-                    <h6>Redes sociais</h6>
-                    <a href="">Facebook</a>
-                    <a href="">Twitter</a>
-                    <a href="">Instagram</a>
-                </div>
-            </section>
+               <section class="f-sect footer-links">
+                  <div class="footer-block">
+                     <h6>Links</h6>
+
+                     <nav aria-label="Links institucionais">
+                        <a href="">Wiki</a>
+                        <a href="">Suporte</a>
+                     </nav>
+                  </div>
+
+                  <!--<div class="footer-block">
+            <h6>Redes sociais</h6>
+
+            <nav aria-label="Redes sociais">
+               <a href="">Facebook</a>
+            </nav>
+         </div>-->
+               </section>
+            </div>
 
             <div class="div-space"></div>
 
             <div class="footer-content">
-                <p>&copy; 2026 Atom. Todos os direitos reservados.</p>
-                <p>Contribua em <a href="https://github.com/atom" target="_blank" rel="noopener noreferrer">Atom Team</a></p>
-            </div>
-        </footer>
-    </div>
+               <p>&copy; 2026 Atom. Todos os direitos reservados.</p>
 
-    <div class="InWorkPage">Trabalhando...</div>
-</body>
+               <p>
+                  Contribua em
+                  <a
+                     href="https://github.com/xtaz7c/atom"
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     Atom Team
+                  </a>
+               </p>
+            </div>
+         </footer>
+      </div>
+
+      <script src="/js/faq.js"></script>
+   </body>
 </html>

@@ -1,26 +1,293 @@
-.footer{
-    height: 14vh;
+.footer {
     width: 100%;
-    padding: var(--gap-04);
+    min-height: 14vh;
+
+    padding: var(--space-6) var(--space-7) var(--space-4);
+
     display: flex;
-    align-items: center;
     flex-direction: column;
-    z-index: 100;
-    border-top: 1px solid var(--bg-w-00);
+    align-items: center;
+
     background: var(--bg-01);
+
+    border-top: var(--border-01);
+
+    z-index: 100;
+
+    font-family: var(--font-sans);
 }
 
-.div-space{
-    height: 1px;
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+.footer-main {
     width: 100%;
-    padding: 0.1px;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: var(--space-8);
+
+    padding-bottom: var(--space-5);
+}
+
+
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
+
+.f-sect {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: var(--space-8);
+}
+
+.footer-brand {
+    align-items: center;
+}
+
+.footer-links {
+    justify-content: flex-end;
+}
+
+
+/* =========================================================
+   BLOCOS
+   ========================================================= */
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-2);
+
+    min-width: 120px;
+}
+
+.footer-block h6 {
+    margin: 0 0 var(--space-2);
+
+    color: var(--txt-01);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.footer-block p {
+    margin: 0;
+
+    color: var(--txt-03);
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.footer-block p span {
+    color: var(--brand-01);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.footer-block nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-1);
+}
+
+.footer a {
+    width: fit-content;
+
+    color: var(--txt-03);
+
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    transition: var(--ani-02);
+}
+
+.footer a:hover {
+    color: var(--brand-01);
+
+    transform: translateX(2px);
+}
+
+.footer a:focus-visible {
+    outline: 2px solid var(--brand-01);
+    outline-offset: 4px;
+
+    border-radius: var(--rad-01);
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.footer-status {
+    min-width: 150px;
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-2);
+
+    padding: var(--space-3) var(--space-4);
+
+    border: var(--border-01);
+    border-radius: var(--rad-03);
+
+    background: var(--bg-02-2);
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--success-01);
+
+    box-shadow: 0 0 8px var(--brand-04);
+}
+
+.footer-status > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.status-label {
+    color: var(--txt-03);
+
+    font-size: 0.65rem;
+}
+
+.footer-status strong {
+    color: var(--success-01);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.div-space {
+    width: 100%;
+    max-width: 1200px;
+    height: 1px;
+
+    flex-shrink: 0;
+
     background: var(--bg-w-00);
 }
 
-.footer-content{
+
+/* =========================================================
+   RODAPÉ INFERIOR
+   ========================================================= */
+
+.footer-content {
     width: 100%;
-    margin: var(--space-6) var(--space-7);
+    max-width: 1200px;
+
+    margin-top: var(--space-4);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: var(--space-4);
+}
+
+.footer-content p {
+    margin: 0;
+
+    color: var(--txt-03);
+
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+.footer-content a {
+    color: var(--txt-02);
+}
+
+.footer-content a:hover {
+    color: var(--brand-01);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: var(--space-5) var(--space-4) var(--space-4);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-5);
+    }
+
+    .footer-brand,
+    .footer-links {
+        justify-content: space-between;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: var(--space-2);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .footer-main {
+        gap: var(--space-6);
+    }
+
+    .f-sect {
+        flex-direction: column;
+
+        gap: var(--space-5);
+    }
+
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+    }
+
+    .footer-status {
+        width: 100%;
+    }
+
+    .footer-content {
+        margin-top: var(--space-3);
+    }
 }

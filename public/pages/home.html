@@ -32,208 +32,153 @@
 
       <div id="content">
          <header class="head">
+            <a
+               href="/"
+               class="right-box"
+               aria-label="Atom — início"
+               data-i18n-aria="header.home">
+               <img
+                  class="head-logo"
+                  src="/asset/briefing/MoonBeak.png"
+                  alt="Atom"
+                  data-i18n-alt="header.logo" />
+            </a>
 
-    <a
-        href="/"
-        class="right-box"
-        aria-label="Atom — início"
-        data-i18n-aria="header.home"
-    >
-        <img
-            class="head-logo"
-            src="/asset/briefing/MoonBeak.png"
-            alt="Atom"
-            data-i18n-alt="header.logo"
-        >
-    </a>
+            <!-- Navegação principal -->
+            <nav
+               class="center-box"
+               aria-label="Navegação principal"
+               data-i18n-aria="header.navigation">
+               <a href="" class="nav-link active">
+                  <ion-icon
+                     class="icon icon-cor-nav"
+                     name="navigate-outline"
+                     aria-hidden="true"></ion-icon>
 
+                  <span data-i18n="navigation.discover"> Descobrir </span>
+               </a>
 
-    <!-- Navegação principal -->
-    <nav
-        class="center-box"
-        aria-label="Navegação principal"
-        data-i18n-aria="header.navigation"
-    >
+               <a href="" class="nav-link">
+                  <ion-icon
+                     class="icon icon-cor-fire"
+                     name="flame-outline"
+                     aria-hidden="true"></ion-icon>
 
-        <a href="" class="nav-link active">
-            <ion-icon
-                class="icon icon-cor-nav"
-                name="navigate-outline"
-                aria-hidden="true"
-            ></ion-icon>
+                  <span data-i18n="navigation.popular"> Popular </span>
+               </a>
 
-            <span data-i18n="navigation.discover">
-                Descobrir
-            </span>
-        </a>
+               <a href="" class="nav-link">
+                  <ion-icon
+                     class="icon icon-cor-ren"
+                     name="time-outline"
+                     aria-hidden="true"></ion-icon>
 
-        <a href="" class="nav-link">
-            <ion-icon
-                class="icon icon-cor-fire"
-                name="flame-outline"
-                aria-hidden="true"
-            ></ion-icon>
+                  <span data-i18n="navigation.recent"> Recentes </span>
+               </a>
 
-            <span data-i18n="navigation.popular">
-                Popular
-            </span>
-        </a>
+               <a href="" class="nav-link">
+                  <ion-icon
+                     class="icon icon-cor-coll"
+                     name="grid-outline"
+                     aria-hidden="true"></ion-icon>
 
-        <a href="" class="nav-link">
-            <ion-icon
-                class="icon icon-cor-ren"
-                name="time-outline"
-                aria-hidden="true"
-            ></ion-icon>
+                  <span data-i18n="navigation.collections"> Coleções </span>
+               </a>
 
-            <span data-i18n="navigation.recent">
-                Recentes
-            </span>
-        </a>
+               <a href="" class="nav-link">
+                  <ion-icon
+                     class="icon icon-cor-tops"
+                     name="star-outline"
+                     aria-hidden="true"></ion-icon>
 
-        <a href="" class="nav-link">
-            <ion-icon
-                class="icon icon-cor-coll"
-                name="grid-outline"
-                aria-hidden="true"
-            ></ion-icon>
+                  <span data-i18n="navigation.top"> Tops </span>
+               </a>
 
-            <span data-i18n="navigation.collections">
-                Coleções
-            </span>
-        </a>
+               <a href="" class="nav-link">
+                  <ion-icon
+                     class="icon icon-cor-gen"
+                     name="filter-outline"
+                     aria-hidden="true"></ion-icon>
 
-        <a href="" class="nav-link">
-            <ion-icon
-                class="icon icon-cor-tops"
-                name="star-outline"
-                aria-hidden="true"
-            ></ion-icon>
+                  <span data-i18n="navigation.genres"> Gêneros </span>
+               </a>
+            </nav>
 
-            <span data-i18n="navigation.top">
-                Tops
-            </span>
-        </a>
+            <!-- Ações -->
+            <div class="left-box">
+               <a
+                  href=""
+                  class="nav-link icon-only"
+                  aria-label="Calendário"
+                  data-i18n-aria="header.calendar">
+                  <ion-icon
+                     name="calendar-outline"
+                     aria-hidden="true"></ion-icon>
+               </a>
 
-        <a href="" class="nav-link">
-            <ion-icon
-                class="icon icon-cor-gen"
-                name="filter-outline"
-                aria-hidden="true"
-            ></ion-icon>
+               <!-- LANGUAGE DROPDOWN -->
+               <div class="language">
+                  <button
+                     type="button"
+                     class="language-button"
+                     aria-expanded="false"
+                     aria-haspopup="true"
+                     aria-controls="language-menu"
+                     data-i18n-aria="language.selector">
+                     <ion-icon
+                        name="globe-outline"
+                        aria-hidden="true"></ion-icon>
 
-            <span data-i18n="navigation.genres">
-                Gêneros
-            </span>
-        </a>
+                     <span class="language-current"> PT </span>
 
-    </nav>
+                     <ion-icon
+                        class="language-chevron"
+                        name="chevron-down-outline"
+                        aria-hidden="true"></ion-icon>
+                  </button>
 
+                  <div
+                     id="language-menu"
+                     class="language-menu"
+                     role="menu"
+                     hidden>
+                     <button
+                        type="button"
+                        class="language-option active"
+                        role="menuitem"
+                        data-language="pt-BR">
+                        <span>Português</span>
+                        <small>PT</small>
+                     </button>
 
-    <!-- Ações -->
-    <div class="left-box">
+                     <button
+                        type="button"
+                        class="language-option"
+                        role="menuitem"
+                        data-language="en-US">
+                        <span>English</span>
+                        <small>EN</small>
+                     </button>
 
-        <a
-            href=""
-            class="nav-link icon-only"
-            aria-label="Calendário"
-            data-i18n-aria="header.calendar"
-        >
-            <ion-icon
-                name="calendar-outline"
-                aria-hidden="true"
-            ></ion-icon>
-        </a>
+                     <button
+                        type="button"
+                        class="language-option"
+                        role="menuitem"
+                        data-language="es-ES">
+                        <span>Español</span>
+                        <small>ES</small>
+                     </button>
+                  </div>
+               </div>
 
+               <!-- LOGIN -->
+               <button type="button" class="login">
+                  <ion-icon name="log-in-outline" aria-hidden="true"></ion-icon>
 
-        <!-- LANGUAGE DROPDOWN -->
-        <div class="language">
-
-            <button
-                type="button"
-                class="language-button"
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-controls="language-menu"
-                data-i18n-aria="language.selector"
-            >
-                <ion-icon
-                    name="globe-outline"
-                    aria-hidden="true"
-                ></ion-icon>
-
-                <span class="language-current">
-                    PT
-                </span>
-
-                <ion-icon
-                    class="language-chevron"
-                    name="chevron-down-outline"
-                    aria-hidden="true"
-                ></ion-icon>
-            </button>
-
-
-            <div
-                id="language-menu"
-                class="language-menu"
-                role="menu"
-                hidden
-            >
-
-                <button
-                    type="button"
-                    class="language-option active"
-                    role="menuitem"
-                    data-language="pt-BR"
-                >
-                    <span>Português</span>
-                    <small>PT</small>
-                </button>
-
-                <button
-                    type="button"
-                    class="language-option"
-                    role="menuitem"
-                    data-language="en-US"
-                >
-                    <span>English</span>
-                    <small>EN</small>
-                </button>
-
-                <button
-                    type="button"
-                    class="language-option"
-                    role="menuitem"
-                    data-language="es-ES"
-                >
-                    <span>Español</span>
-                    <small>ES</small>
-                </button>
-
+                  <span data-i18n="auth.login"> Entrar </span>
+               </button>
             </div>
-
-        </div>
-
-
-        <!-- LOGIN -->
-        <button
-            type="button"
-            class="login"
-        >
-            <ion-icon
-                name="log-in-outline"
-                aria-hidden="true"
-            ></ion-icon>
-
-            <span data-i18n="auth.login">
-                Entrar
-            </span>
-        </button>
-
-    </div>
-
-</header>
+         </header>
 
          <main class="main">
             <div class="bg-1">
@@ -259,7 +204,8 @@
 
             <section class="set-h2 collumn">
                <div class="boxlayout-1 popular">
-                  <h2 class="section-title">Filmes Populares</h2>
+                  <a href="#" class="go-link"><h2 class="section-title">Filmes Populares</h2></a>
+                  
 
                   <article class="layout-content-card">
                      <a class="content-card">
@@ -295,7 +241,7 @@
                </div>
 
                <div class="boxlayout-1 popular">
-                  <h2 class="section-title">Séries Populares</h2>
+                  <a href="#" class="go-link"><h2 class="section-title">Séries Populares</h2></a>
 
                   <article class="layout-content-card">
                      <a class="content-card">
